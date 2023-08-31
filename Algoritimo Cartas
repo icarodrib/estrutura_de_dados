@@ -1,0 +1,20 @@
+Var
+    carta: vetor[0...2] de inteiro
+    qtde, i ,j: inteiro
+Início
+    carta[0] <- 5
+    carta[1] <- 2
+    carta[2] <- 3
+    qtde <- 2
+    escreva (carta[0], carta[1], carta[2])
+
+    para i de 0 até qtde, faça:
+        para j de 0 até qtde-1, faça:
+            se (carta[j]>carta[j]+1) então
+                carta[j] <- carta[j+1]
+                carta[j+1] <- carta[j]
+            fim-se
+        fim-para
+    fim-para
+    escreva(carta[0],carta[1],carta[2])
+fim-algoritimo
