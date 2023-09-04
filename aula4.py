@@ -1,30 +1,25 @@
-# Função para a ordenação das cartas
-def ordenar():
-    for i in range(qtde):
-        for j in range(qtde-1):
-            if cartas[j] > cartas[j+1]:
-                cartas[j], cartas[j+1]=cartas[j+1], cartas[j]
+# Importação da Biblioteca
+from lib_aula4 import *
 
 # ---Início do programa----------------------------------------------------------------------------------------------------------------------------------
 cartas = []
-""" maxLenghtList = 3 """
-# Entrada da quantidade de cartas
+
+# Declaração da quantidade de cartas
 qtde = int(input("Declare quantas cartas pretende digitar: "))
 
-# Entrada de dados na lista
-for i in range(qtde):
-    cartas.append(int(input(f"Digite a carta Nº{i+1}: ")))
+# Declaração dos valores das cartas
+cartas = declararCartas(qtde)
 
-# Imprimi as cartas digitadas
-print("\nCartas na ordem de entrada:")
+# Mostra as cartas na ordem em que foram digitadas
+print("\nCartas na ordem em que foram digitadas: ")
 for i in range(qtde):
     print(f"A carta Nº{i+1} é:",cartas[i])
 
 # Chamada de função para realizar a ordenação
-ordenar()
+ordenarCartas(qtde,cartas)
 
-# Imprime as cartas ordenadamente
-print("\nCartas na ordem crescente:")
+# Mostra as cartas na ordem crescente
+print("\nCartas na ordem crescente: ")
 for i in range(qtde):
     print(f"A carta Nº{i+1} é:",cartas[i])
 
